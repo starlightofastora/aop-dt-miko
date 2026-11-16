@@ -1,0 +1,138 @@
+:root {
+  --bg: #1b2838;
+  --bg-dark: #171a21;
+  --panel: rgba(0, 0, 0, 0.35);
+  --panel-light: rgba(103, 193, 245, 0.08);
+  --text: #c6d4df;
+  --text-dim: #8f98a0;
+  --accent: #66c0f4;
+  --online: #57cbde;
+  --green: #a1cd44;
+  --level: #8bc53f;
+  --bg-image: linear-gradient(135deg, #2a475e 0%, #1b2838 45%, #101822 100%);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: #fff; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.elmer-miko-dim,
+.elmer-miko-location-dim,
+.elmer-miko-dim-small { color: var(--text-dim); }
+.elmer-miko-small,
+.elmer-miko-dim-small { font-size: 12px; }
+
+.elmer-miko-topbar { background: var(--bg-dark); border-bottom: 1px solid #000; }
+.elmer-miko-topbar nav { max-width: 940px; margin: 0 auto; padding: 0 16px; display: flex; gap: 24px; align-items: center; height: 44px; }
+.elmer-miko-topbar .elmer-miko-logo { font-weight: 700; letter-spacing: 1px; color: #fff; }
+.elmer-miko-topbar a { color: var(--text-dim); font-size: 13px; }
+.elmer-miko-topbar a:hover { color: #fff; }
+
+.elmer-miko-page { background: var(--bg-image); min-height: 100vh; padding: 24px 16px 48px; }
+.elmer-miko-wrap { max-width: 940px; margin: 0 auto; }
+.elmer-miko-box,
+.elmer-miko-box-header { background: var(--panel); padding: 16px; margin-bottom: 16px; }
+.elmer-miko-box h2,
+.elmer-miko-box-header h2 { font-size: 14px; font-weight: 400; color: #fff; margin-bottom: 12px; }
+
+.elmer-miko-box-header { display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: start; }
+.elmer-miko-avatar-frame { width: 164px; height: 164px; padding: 4px; background: linear-gradient(#57cbde, #2f6f8f); }
+.elmer-miko-avatar-frame-in-game { background: linear-gradient(#90ba3c, #5c7e10); }
+.elmer-miko-avatar { width: 100%; height: 100%; background: linear-gradient(135deg, #3b5f7c, #14202c); display: grid; place-items: center; font-size: 56px; color: #fff; font-weight: 700; }
+.elmer-miko-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.elmer-miko-name { font-size: 26px; color: #fff; font-weight: 400; line-height: 1.2; }
+.elmer-miko-real-name { color: var(--text-dim); margin-top: 2px; }
+.elmer-miko-location-dim { margin-top: 6px; }
+.elmer-miko-summary { margin-top: 14px; max-width: 460px; }
+.elmer-miko-status { margin-top: 14px; color: var(--online); }
+.elmer-miko-status-in-game { color: var(--green); }
+.elmer-miko-status small { display: block; color: var(--text-dim); font-size: 12px; }
+
+.elmer-miko-level-box { text-align: right; }
+.elmer-miko-level-line { display: flex; align-items: center; gap: 10px; justify-content: flex-end; font-size: 18px; color: #fff; }
+.elmer-miko-level-badge { width: 38px; height: 38px; border: 3px solid var(--level); border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: #fff; font-size: 16px; }
+.elmer-miko-btn { display: inline-block; margin-top: 12px; padding: 5px 14px; background: rgba(103, 193, 245, 0.2); color: var(--accent); border: 0; border-radius: 2px; font: inherit; cursor: pointer; }
+.elmer-miko-btn:hover { background: var(--accent); color: #fff; }
+
+.elmer-miko-cols { display: grid; grid-template-columns: 1fr 280px; gap: 16px; }
+
+.elmer-miko-showcase { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.elmer-miko-stat { background: var(--panel-light); padding: 12px; text-align: center; }
+.elmer-miko-stat b { display: block; font-size: 22px; color: #fff; font-weight: 400; }
+.elmer-miko-stat span { font-size: 12px; color: var(--text-dim); }
+
+.elmer-miko-game-game-one,
+.elmer-miko-game-game-two,
+.elmer-miko-game-game-three { display: grid; grid-template-columns: 120px 1fr auto; gap: 12px; align-items: center; padding: 10px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.elmer-miko-game-game-one:first-of-type,
+.elmer-miko-game-game-two:first-of-type,
+.elmer-miko-game-game-three:first-of-type { border-top: 0; }
+.elmer-miko-game-game-one { --c1: #7a2a2a; --c2: #2a1414; }
+.elmer-miko-game-game-two { --c1: #2a5a7a; --c2: #14202c; }
+.elmer-miko-game-game-three { --c1: #3f6b2a; --c2: #16240f; }
+.elmer-miko-cover { height: 45px; background: linear-gradient(135deg, var(--c1), var(--c2)); display: grid; place-items: center; font-size: 11px; color: #fff; text-align: center; padding: 2px; }
+.elmer-miko-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.elmer-miko-game-title { color: #fff; }
+.elmer-miko-bar { appearance: none; -webkit-appearance: none; display: block; width: 100%; height: 6px; border: 0; background: rgba(0, 0, 0, 0.5); margin-top: 6px; }
+.elmer-miko-bar::-webkit-progress-bar { background: rgba(0, 0, 0, 0.5); }
+.elmer-miko-bar::-webkit-progress-value { background: var(--accent); }
+.elmer-miko-bar::-moz-progress-bar { background: var(--accent); }
+.elmer-miko-game-hours { text-align: right; font-size: 12px; color: var(--text-dim); white-space: nowrap; }
+
+.elmer-miko-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.elmer-miko-badge-badge-gold,
+.elmer-miko-badge-badge-blue,
+.elmer-miko-badge-badge-green,
+.elmer-miko-badge-badge-red { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--c1), var(--c2)); display: grid; place-items: center; font-size: 22px; }
+.elmer-miko-badge-badge-gold img,
+.elmer-miko-badge-badge-blue img,
+.elmer-miko-badge-badge-green img,
+.elmer-miko-badge-badge-red img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
+.elmer-miko-badge-badge-gold { --c1: #d9a441; --c2: #7a5a1a; }
+.elmer-miko-badge-badge-blue { --c1: #66c0f4; --c2: #1a4a6a; }
+.elmer-miko-badge-badge-green { --c1: #a1cd44; --c2: #3f5a14; }
+.elmer-miko-badge-badge-red { --c1: #c75a5a; --c2: #5a1a1a; }
+.elmer-miko-shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.elmer-miko-shot { aspect-ratio: 16 / 9; background: linear-gradient(135deg, var(--c1), var(--c2)); }
+.elmer-miko-shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.elmer-miko-shot-purple { --c1: #5a3a7a; --c2: #1a1226; }
+.elmer-miko-shot-brown { --c1: #7a5a2a; --c2: #261a0f; }
+.elmer-miko-shot-teal { --c1: #2a6a6a; --c2: #0f2626; }
+
+.elmer-miko-friend { display: flex; align-items: center; gap: 10px; padding: 6px 0; }
+.elmer-miko-friend .elmer-miko-mini-in-game { width: 32px; height: 32px; padding: 2px; background: var(--online); flex: none; }
+.elmer-miko-friend .elmer-miko-mini-in-game { background: var(--green); }
+.elmer-miko-friend .elmer-miko-mini-offline { background: #5a5a5a; }
+.elmer-miko-friend .elmer-miko-mini-in-game div { width: 100%; height: 100%; background: #1f3346; display: grid; place-items: center; color: #fff; font-size: 13px; }
+.elmer-miko-friend .elmer-miko-mini-in-game img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.elmer-miko-friend .elmer-miko-who { line-height: 1.2; }
+.elmer-miko-friend .elmer-miko-who small { display: block; font-size: 12px; color: var(--text-dim); }
+.elmer-miko-friend .elmer-miko-who .elmer-miko-g { color: var(--green); }
+
+.elmer-miko-comment { padding: 10px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.elmer-miko-comment:first-of-type { border-top: 0; }
+.elmer-miko-comment b { color: var(--accent); font-weight: 400; }
+.elmer-miko-comment small { color: var(--text-dim); margin-left: 6px; }
+.elmer-miko-comment-form textarea { width: 100%; min-height: 60px; background: rgba(0, 0, 0, 0.4); border: 1px solid #000; color: var(--text); padding: 8px; font: inherit; resize: vertical; }
+
+@media (max-width: 760px) {
+  .elmer-miko-box-header { grid-template-columns: 1fr; }
+  .elmer-miko-level-box { text-align: left; }
+  .elmer-miko-level-line { justify-content: flex-start; }
+  .elmer-miko-cols { grid-template-columns: 1fr; }
+  .elmer-miko-showcase { grid-template-columns: repeat(2, 1fr); }
+  .elmer-miko-game-game-one,
+  .elmer-miko-game-game-two,
+  .elmer-miko-game-game-three { grid-template-columns: 90px 1fr; }
+  .elmer-miko-game-hours { grid-column: 2; text-align: left; }
+}

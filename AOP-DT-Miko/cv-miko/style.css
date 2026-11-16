@@ -1,0 +1,261 @@
+@font-face{font-family:"Inter";font-weight:200;font-style:normal;font-display:swap;src:url("fonts/Inter-ExtraLight.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-weight:300;font-style:normal;font-display:swap;src:url("fonts/Inter-Light.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-weight:600;font-style:normal;font-display:swap;src:url("fonts/Inter-SemiBold.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-weight:700;font-style:normal;font-display:swap;src:url("fonts/Inter-Bold.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-weight:800;font-style:normal;font-display:swap;src:url("fonts/Inter-ExtraBold.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-weight:900;font-style:normal;font-display:swap;src:url("fonts/Inter-Black.woff2") format("woff2")}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+.miko-body{
+  font-family:"Inter",Arial,sans-serif;
+  background:#eeeeee;
+  color:#071b2b;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+.miko-topbar{
+  background:#071b2b;
+  height:70px;
+  display:flex;
+  align-items:center;
+  padding:0 20px;
+}
+.miko-topbar-nama{
+  color:#eeeeee;
+  font-size:26px;
+  font-weight:700;
+}
+
+.miko-halaman{
+  width:100%;
+  max-width:924px;
+  margin:0 auto;
+  padding:13px 16px 0;
+  flex:1;
+}
+
+.miko-profil{
+  background:#1e3041;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  gap:29px;
+  padding:16px 26px;
+}
+.miko-profil-foto{
+  width:228px;
+  height:228px;
+  display:block;
+  border-radius:50%;
+  border:5px solid #ffffff;
+  object-fit:cover;
+  object-position:center 62%;
+}
+.miko-profil-bingkai{
+  position:relative;
+  width:228px;
+  height:228px;
+  flex-shrink:0;
+}
+.miko-lencana-tugas{
+  position:absolute;
+  right:-26px;
+  bottom:14px;
+  background:#167D8D;
+  color:#ffffff;
+  font-size:16px;
+  font-weight:700;
+  text-decoration:none;
+  padding:6px 16px;
+  border-radius:999px;
+  transform:rotate(-8deg);
+  box-shadow:0 3px 8px rgba(0,0,0,0.35);
+  transition:transform 0.2s ease,background 0.2s ease;
+}
+.miko-lencana-tugas:hover{
+  background:#1FA5B8;
+  transform:rotate(-8deg) scale(1.08);
+}
+.miko-lencana-tugas:focus-visible{
+  outline:3px solid #ffffff;
+  outline-offset:2px;
+}
+.miko-profil-teks{
+  color:#eeeeee;
+  padding-right:30px;
+}
+.miko-profil-nama{
+  font-size:48px;
+  font-weight:600;
+  line-height:1.1;
+}
+.miko-profil-jabatan{
+  font-size:18px;
+  font-weight:300;
+  margin-bottom:22px;
+}
+.miko-profil-deskripsi{
+  font-size:14px;
+  font-weight:200;
+  line-height:1.55;
+}
+
+.miko-baris{
+  display:flex;
+  gap:24px;
+  align-items:flex-end;
+  margin-top:28px;
+}
+.miko-kolom-kolom-ekskul,
+.miko-kolom-kolom-pendidikan{
+  display:flex;
+  flex-direction:column;
+}
+.miko-kolom-kolom-ekskul{
+  width:433px;
+  margin-left:4px;
+}
+.miko-kolom-kolom-pendidikan{
+  width:431px;
+  flex-shrink:0;
+}
+.miko-judul-judul-ekskul,
+.miko-judul-judul-pendidikan,
+.miko-judul-judul-projek{
+  font-size:30px;
+  font-weight:800;
+  line-height:1.37;
+  color:#071b2b;
+}
+.miko-judul-judul-ekskul{
+  margin-bottom:7px;
+  width:300px;
+}
+.miko-judul-judul-pendidikan{
+  margin-bottom:7px;
+}
+
+.miko-kartu-kartu-ekskul,
+.miko-kartu-kartu-pendidikan{
+  background:#1e3041;
+  border-radius:16px;
+  color:#eeeeee;
+  height:385px;
+}
+
+.miko-kartu-kartu-ekskul{
+  padding:0 40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-evenly;
+}
+.miko-ekskul-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.miko-ekskul-nama{
+  font-size:36px;
+  font-weight:600;
+  line-height:1.15;
+  width:200px;
+}
+.miko-ekskul-ket{
+  font-size:15px;
+  font-weight:300;
+}
+.miko-ekskul-tahun{
+  font-size:56px;
+  font-weight:200;
+  text-align:right;
+}
+
+.miko-kartu-kartu-pendidikan{
+  padding:25px 14px 25px 14px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+}
+.miko-sekolah{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.miko-sekolah-logo{
+  width:110px;
+  height:110px;
+  object-fit:contain;
+  flex-shrink:0;
+}
+.miko-sekolah-info{
+  text-align:right;
+}
+.miko-sekolah-nama{
+  font-size:30px;
+  font-weight:600;
+  line-height:1.4;
+}
+.miko-sekolah-jenjang{
+  font-size:20px;
+  font-weight:300;
+}
+
+.miko-projek{
+  margin-top:23px;
+  padding-bottom:30px;
+}
+.miko-judul-judul-projek{
+  margin-left:4px;
+  margin-bottom:20px;
+}
+.miko-projek-daftar{
+  display:flex;
+  justify-content:space-between;
+  padding:0 6px;
+}
+.miko-projek-item{
+  width:228px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.miko-projek-foto-foto-bisnis,
+.miko-projek-foto-foto-musik,
+.miko-projek-foto-foto-bio{
+  width:228px;
+  height:228px;
+  border-radius:50%;
+  border:10px solid #071b2b;
+  object-fit:cover;
+}
+.miko-projek-foto-foto-bisnis{object-position:left center}
+.miko-projek-foto-foto-musik{object-position:center center}
+.miko-projek-foto-foto-bio{object-position:center 10%}
+.miko-projek-judul{
+  margin-top:20px;
+  font-size:18px;
+  font-weight:900;
+  white-space:nowrap;
+  line-height:1.4;
+  text-align:center;
+  color:#071b2b;
+}
+
+.miko-footer{
+  background:#071b2b;
+  height:66px;
+}
+
+@media (max-width:860px){
+  .miko-profil{flex-direction:column;text-align:center;padding:26px 20px}
+  .miko-profil-teks{padding-right:0}
+  .miko-baris{flex-direction:column;align-items:stretch}
+  .miko-kolom-kolom-ekskul,.miko-kolom-kolom-pendidikan{width:100%;margin-left:0}
+  .miko-judul-judul-ekskul{width:auto}
+  .miko-kartu-kartu-ekskul,.miko-kartu-kartu-pendidikan{height:auto;padding-bottom:25px}
+  .miko-projek-daftar{flex-direction:column;align-items:center;gap:30px}
+}
